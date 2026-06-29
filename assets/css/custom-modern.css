@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+:root {
+    --bg-color: #0b0f19;
+    --text-color: #e2e8f0;
+    --accent-primary: #5246e5;
+    --accent-secondary: #e84158;
+    --accent-tertiary: #b23b8f;
+    --box-bg: rgba(17, 24, 39, 0.7);
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+body,
+input,
+select,
+textarea {
+    font-family: 'Inter', sans-serif !important;
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+}
+
+body.landing #page-wrapper {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+}
+
+/* Glassmorphism Header */
+#header {
+    background: rgba(11, 15, 25, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#header h1 a {
+    color: var(--accent-primary) !important;
+    font-weight: 800;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#header nav ul li a {
+    color: #cbd5e1 !important;
+    font-weight: 600;
+}
+
+#header nav ul li a:hover {
+    color: var(--accent-primary) !important;
+}
+
+#header .button {
+    background: linear-gradient(90deg, var(--accent-secondary), var(--accent-primary)) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);
+    border-radius: 8px !important;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#header .button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 210, 255, 0.5);
+}
+
+/* Banner */
+#banner {
+    background: radial-gradient(circle at center, rgba(58, 123, 213, 0.3) 0%, var(--bg-color) 70%) !important;
+    padding: 10em 0 8em 0 !important;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../images/abstract.png') center/cover no-repeat;
+    opacity: 0.2;
+    z-index: 0;
+}
+
+#banner>* {
+    position: relative;
+    z-index: 1;
+}
+
+#banner h2 {
+    font-size: 4em !important;
+    color: white !important;
+    /* background: -webkit-linear-gradient(45deg, var(--accent-primary), var(--accent-tertiary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    margin-bottom: 0.2em;
+    text-shadow: none;
+}
+
+#banner p {
+    font-size: 1.25em;
+    color: #c9d3e3 !important;
+    text-shadow: 3px 3px 10px #000000 !important;
+    max-width: 600px;
+    margin: 0 auto 2em auto;
+    /* font-weight: 400; */
+}
+
+/* Buttons */
+.button.primary {
+    background: linear-gradient(90deg, var(--accent-tertiary), var(--accent-primary)) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.button.primary:hover {
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.6);
+    transform: translateY(-2px);
+}
+
+.button.alt {
+    border: 1px solid var(--accent-primary) !important;
+    color: var(--text-color) !important;
+    border-radius: 8px !important;
+    background: var(--accent-primary) !important;
+}
+
+.button.alt:hover {
+    background: rgba(0, 210, 255, 0.1) !important;
+}
+
+/* Main Content & Boxes */
+.box {
+    background: var(--box-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.box.special {
+    text-align: center;
+}
+
+.features-row {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.features-row section {
+    border-right: 1px solid var(--border-color) !important;
+}
+
+.features-row section:last-child {
+    border-right: none !important;
+}
+
+.features-row:last-child {
+    border-bottom: none !important;
+}
+
+.features-row section {
+    padding: 3em !important;
+}
+
+.icon.major {
+    color: var(--accent-primary) !important;
+    background: rgba(0, 210, 255, 0.1) !important;
+    border: 1px solid rgba(0, 210, 255, 0.2) !important;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+}
+
+/* Images */
+.image.featured {
+    border-radius: 16px 16px 0 0 !important;
+    overflow: hidden;
+}
+
+.image.featured img {
+    border-radius: 16px 16px 0 0 !important;
+    transition: transform 0.5s ease;
+}
+
+.box:hover .image.featured img {
+    transform: scale(1.05);
+}
+
+/* CTA Section */
+#cta {
+    background: linear-gradient(135deg, rgba(11, 15, 25, 0.9), rgba(58, 123, 213, 0.4)) !important;
+    border-top: 1px solid var(--border-color);
+    padding: 6em 0 !important;
+}
+
+input[type="email"],
+input[type="text"] {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--border-color) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+}
+
+input[type="email"]:focus,
+input[type="text"]:focus {
+    border-color: var(--accent-primary) !important;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2) !important;
+}
+
+/* Footer */
+#footer {
+    background: #06080d !important;
+    padding: 4em 0 !important;
+    border-top: 1px solid var(--border-color);
+}
+
+#footer .icons li a {
+    color: #94a3b8 !important;
+}
+
+#footer .icons li a:hover {
+    color: var(--accent-primary) !important;
+}
+
+#footer .copyright {
+    color: #64748b !important;
+}
+
+/* Fix overlapping spacing on landing page */
+@media screen and (min-width: 737px) {
+    body.landing #main {
+        margin-top: -10.5em !important;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    body.landing #main {
+        margin-top: 0em !important;
+        padding-top: 2em !important;
+    }
+}
+
+/* Nav overrides */
+@media screen and (max-width: 840px) {
+    #header {
+        display: block !important;
+    }
+
+    #navPanel,
+    #navButton {
+        display: none !important;
+    }
+}
+
+/* Logo toggling */
+.small-logo {
+    display: none !important;
+}
+
+@media screen and (max-width: 840px) {
+    .full-logo {
+        display: none !important;
+    }
+
+    .small-logo {
+        display: inline-block !important;
+    }
+}
+
+/* Fix Get Started Button Centering */
+input[type="submit"].fit {
+    text-align: center !important;
+}
+
+/* Intro Box Structure */
+.intro-box {
+    padding: 4em 3em !important;
+    background: linear-gradient(135deg, rgba(82, 70, 229, 0.05), rgba(178, 59, 143, 0.05)) !important;
+    border: 1px solid rgba(82, 70, 229, 0.3) !important;
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+    text-align: left;
+}
+
+.intro-header {
+    flex: 1;
+}
+
+.intro-header h2 {
+    font-size: 2.4em !important;
+    line-height: 1.2;
+    margin: 0;
+    color: #ffffff !important;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-text p {
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin: 0;
+    color: #c9d3e3 !important;
+}
+
+@media screen and (max-width: 840px) {
+    .intro-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5em;
+    }
+}
