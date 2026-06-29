@@ -1,161 +1,318 @@
-<!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html class="light" lang="en">
 
 <head>
-	<title>Gratovo - Tech & AI Influencer Marketing Agency</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<meta name="description" content="Gratovo is the premier influencer marketing agency for AI and Tech creators." />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="stylesheet" href="assets/css/custom-modern.css" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Gratovo - Tech Influencer Marketing Agency</title>
+    <meta name="description"
+        content="Gratovo is a premier tech influencer marketing agency bridging the gap between brands and creators for authentic partnerships and measurable growth.">
+    <meta name="keywords"
+        content="Tech Influencer Marketing, SaaS Marketing, Tech Creators, Influencer Agency, Growth Marketing">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.gratovo.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gratovo.com/">
+    <meta property="og:title" content="Gratovo - Tech Influencer Marketing Agency">
+    <meta property="og:description"
+        content="Gratovo is a premier tech influencer marketing agency bridging the gap between brands and creators for authentic partnerships and measurable growth.">
+    <meta property="og:image" content="https://www.gratovo.com/images/full-logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.gratovo.com/">
+    <meta property="twitter:title" content="Gratovo - Tech Influencer Marketing Agency">
+    <meta property="twitter:description"
+        content="Gratovo is a premier tech influencer marketing agency bridging the gap between brands and creators for authentic partnerships and measurable growth.">
+    <meta property="twitter:image" content="https://www.gratovo.com/images/full-logo.png">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@500&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#787587",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e0e3e5",
+                        "primary-fixed-dim": "#c5c0ff",
+                        "on-tertiary-container": "#dde0e1",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-variant": "#d3e4fe",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-tint": "#543fe9",
+                        "surface-container-high": "#dce9ff",
+                        "on-background": "#0b1c30",
+                        "tertiary-container": "#606365",
+                        "primary-fixed": "#e4dfff",
+                        "primary-container": "#5844ed",
+                        "on-error-container": "#93000a",
+                        "secondary": "#565e74",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-surface": "#0b1c30",
+                        "on-surface-variant": "#474555",
+                        "tertiary": "#484b4d",
+                        "surface-container-low": "#eff4ff",
+                        "surface": "#f8f9ff",
+                        "on-secondary-container": "#5c647a",
+                        "on-primary-fixed-variant": "#3a19d2",
+                        "surface-container": "#e5eeff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c8c4d8",
+                        "inverse-surface": "#213145",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#e0dbff",
+                        "surface-dim": "#cbdbf5",
+                        "primary": "#3f21d5",
+                        "on-tertiary-fixed": "#191c1e",
+                        "inverse-primary": "#c5c0ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-primary-fixed": "#140067",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#dae2fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "base": "8px",
+                        "grid-gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
 
-<body class="landing is-preload">
-	<div id="page-wrapper">
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <header class="bg-surface-container-lowest border-b border-outline-variant shadow-sm w-full sticky top-0 z-50">
+        <div class="flex justify-between items-center h-20 px-grid-gutter max-w-container-max mx-auto gap-4"><a
+                class="flex items-center" href="#"><img alt="Gratovo Logo" class="h-8 w-auto"
+                    src="images/full-logo.png"></a>
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex gap-8 items-center"><a
+                        class="text-secondary hover:text-primary transition-colors font-label-sm uppercase"
+                        href="#">Services</a><a
+                        class="text-secondary hover:text-primary transition-colors font-label-sm uppercase"
+                        href="#">Portfolio</a></nav><button
+                    class="bg-primary-container text-on-primary py-2 px-6 rounded-DEFAULT font-label-sm uppercase hover:bg-primary transition-colors hidden md:block rounded-full shadow-sm"><span
+                        class="flex items-center gap-2">Work With Us <span
+                            class="material-symbols-outlined text-lg">rocket_launch</span></span></button><button
+                    class="md:hidden text-primary"><span class="material-symbols-outlined"
+                        data-icon="menu">menu</span></button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-br from-surface-container-low to-primary-fixed overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&amp;fit=crop&amp;q=80&amp;w=2070')] bg-cover bg-center opacity-10 mix-blend-overlay">
+            </div>
+            <div
+                class="max-w-container-max mx-auto px-grid-gutter pt-32 pb-32 flex flex-col items-center text-center relative z-10">
+                <h1
+                    class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background mb-6 max-w-4xl text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">
+                    Amplify Your Tech Brand.</h1>
+                <p class="font-body-lg text-body-md md:text-body-lg text-secondary mb-10 max-w-2xl font-medium">We
+                    bridge the connection
+                    between brands and the influencers,<br class="hidden md:block"> making complex growth simple through
+                    authentic
+                    partnerships.</p>
+            </div>
+        </section>
+        <!-- Features Section (3 Cards) -->
+        <section class="w-full mt-8 md:-mt-16 mb-24 relative z-20">
+            <div class="max-w-container-max mx-auto px-grid-gutter">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="order-2 md:order-1 bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-xl shadow-md transition-all duration-300">
+                        <div class="h-48 bg-[url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] bg-cover bg-center"
+                            style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCPXx96niAx6D838POESWd5OJPZyWILggO_4gdk3yagnYTgEKCPwi1_TMRGCh4yIGlayYtBnKO5Ek3U5_ErAYb_JicTN3EGDwv2eFANk_6_SxKBUyi_thhFdfXgJymjPauzN-9Laj9fk4B9_to0TX_xEWjrXjUzE73JpmiStebezkILjQogM7aBN1-ik6hv9HxcHa7-9zrMmSLT5h_oB2iui8DV651ztpiOaFNh82ihu-zj2Q_m6W1hsMoIPekWqwR3umR9ODosrF8&quot;);">
+                        </div>
+                        <div class="p-8 flex flex-col items-start flex-grow relative">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary absolute -top-6 right-8 shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-shield">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-background mb-4">Risk Mitigation &
+                                Compliance
+                            </h3>
+                            <p class="font-body-md text-body-md text-secondary">We ensure legal protection and risk
+                                reduction through meticulous contract management and content review before publication
+                                to prevent any technical or data-related errors.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="order-1 md:order-2 bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-xl shadow-md transition-all duration-300">
+                        <div class="h-48 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] bg-cover bg-center"
+                            style="background-image: url(&quot;https://images.unsplash.com/photo-1780733064275-d1ade9b83a3d?q=80&amp;w=1171&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&quot;);">
+                        </div>
+                        <div class="p-8 flex flex-col items-start flex-grow relative">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary absolute -top-6 right-8 shadow-lg">
+                                <span class="material-symbols-outlined icon-fill text-2xl"
+                                    data-icon="handshake">handshake</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-background mb-4">The Right Connections
+                            </h3>
+                            <p class="font-body-md text-body-md text-secondary">We build authentic, long-lasting
+                                relationships with creators who genuinely align with your brand, ensuring your message
+                                feels natural and trustworthy.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="order-3 md:order-3 bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-xl shadow-md transition-all duration-300">
+                        <div
+                            class="h-48 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] bg-cover bg-center">
+                        </div>
+                        <div class="p-8 flex flex-col items-start flex-grow relative">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary absolute -top-6 right-8 shadow-lg">
+                                <span class="material-symbols-outlined icon-fill text-2xl"
+                                    data-icon="analytics">analytics</span>
+                            </div>
+                            <h3 class="font-headline-md text-headline-md text-on-background mb-4">Growth Powered by
+                                Insights</h3>
+                            <p class="font-body-md text-body-md text-secondary">Advanced analytics and performance
+                                tracking tailored for SaaS to guarantee measurable ROI, attribution
+                                modeling, and sustainable growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Empowering Creators & Brands -->
+        <section class="max-w-container-max mx-auto px-grid-gutter py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2
+                        class="font-headline-lg text-headline-md md:text-headline-lg text-on-background mb-6 leading-tight">
+                        Real People.
+                        Real Tech. Real Impact.</h2>
+                    <p class="font-body-lg text-body-lg text-secondary mb-6">Great tech deserves to be understood. At
+                        Gratovo, we bridge the gap between complex software and the everyday user. We do this by
+                        partnering you with <strong class="text-primary-container">creators who actually care</strong>
+                        about the products they promote, turning technical features into compelling, relatable stories.
+                    </p>
+                    <button
+                        class="text-primary-container font-label-sm uppercase font-semibold flex items-center gap-2 hover:text-primary transition-colors mt-8 group">
+                        Discover Our Approach
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="relative">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-br from-primary-fixed to-surface-variant rounded-2xl transform rotate-3 opacity-70">
+                    </div>
+                    <img alt="Professional modern creative tech workspace with advanced hardware and digital interfaces"
+                        class="rounded-2xl relative z-10 shadow-2xl w-full h-auto object-cover aspect-[4/3]"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMzTN6HH-J1esvXw97Z5qP92N010iIcyxIQjUS6l0GNax6-KOyv_J4KtoT1gQn11XxUSecAlTuhaaxpEhsmxktOEmL20oCiJc5_4Y_Krr9PMGu7gzJvxzJuIxaeWc4FjOAZwCcMtuLFtguUyK_rZMmQnqZnWIltLfnkk3wN8rE9Z8hp5yXJyI4XZfRus--bsclDC1I85qfjbXABR7jfJyJIkzoTzOfTVQQS9wSuYqdayslGEUR2Wf1xbSPC1_5ZlV2nMcRN-YA6Sw">
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section
+            class="bg-gradient-to-r from-primary-container to-primary py-24 px-grid-gutter text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+            </div>
+            <div class="relative z-10">
+                <h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-primary mb-6">Ready to scale
+                    your tech product?
+                </h2>
+                <p class="font-body-lg text-body-lg text-primary-fixed mb-10 max-w-2xl mx-auto">Get in touch to discover
+                    partnership opportunities.</p>
+                <button
+                    class="bg-surface-container-lowest text-primary-container py-4 px-10 rounded-full font-label-sm uppercase text-lg tracking-wider hover:bg-surface-bright transition-colors inline-flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200">
+                    Work With Us
+                    <span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface py-12 border-t border-outline-variant">
+        <div
+            class="max-w-container-max mx-auto px-grid-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <img alt="Gratovo Logo" class="h-8 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                    src="https://lh3.googleusercontent.com/aida/AP1WRLuSo7LGt9BFwXV_vOoXnT2Xjrag8KhLpHQRbo2AEeXLVDASVHfQJ15KYISvhez2EIAwJa1t6x0BcXpCW160kAu1q991P68lYLpS62eV2fWgYRIkAzcKFv8CiWPRXZKaUJ7MwHks8FLIjjVJzUsrloas01K0O7aptwjeJG-g_Q_uO8D7DJpm7A21S7IOJX9IjSPI5Kz2g4ews47D154SIm2IplHwirt35QB4Q1UzpoKv1q1sgiHTW9CVKHw">
+                <p class="font-label-sm text-label-sm uppercase text-secondary">© 2024 Gratovo Agency. Proudly
+                    connecting tech and creators.</p>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-6">
+                <a class="font-label-sm text-label-sm uppercase text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm uppercase text-secondary hover:text-primary transition-colors opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
 
-		<!-- Header -->
-		<header id="header" class="alt">
-			<h1><a href="index.html">
-					<img src="images/full-logo.png" class="full-logo" alt="Gratovo"
-						style="height: 35px; vertical-align: middle;">
-					<img src="images/logo.png" class="small-logo" alt="Gratovo"
-						style="height: 35px; vertical-align: middle;">
-				</a></h1>
-			<nav id="nav">
-				<ul>
-					<!-- <li><a href="#previous-work">Previous Work</a></li> -->
-					<li><a href="#cta" class="button">Work With Us</a></li>
-				</ul>
-			</nav>
-		</header>
 
-		<!-- Banner -->
-		<section id="banner">
-			<h2>Amplify Your Tech Brand</h2>
-			<p>The premier influencer marketing agency for AI and Tech creators.</p>
-			<!-- <ul class="actions special">
-				<li><a href="#cta" class="button primary">Work With Us</a></li>
-				<li><a href="#main" class="button">Our Services</a></li>
-			</ul> -->
-		</section>
 
-		<!-- Main -->
-		<section id="main" class="container">
 
-			<section class="box special intro-box">
-				<div class="intro-content">
-					<div class="intro-header">
-						<h2>Empowering the Next Generation of Tech Voices</h2>
-					</div>
-					<div class="intro-text">
-						<p>At Gratovo, we don't just find influencers; we build <strong>authentic, high-impact partnerships</strong>. We bridge the gap between visionary tech creators and innovative companies, leveraging our deep expertise in AI, software development, and modern tech ecosystems.</p>
-					</div>
-				</div>
-			</section>
 
-			<section class="box special features">
-				<div class="features-row">
-					<section>
-						<span class="icon solid major fa-bullhorn accent2"></span>
-						<h3>Campaign Management</h3>
-						<p>End-to-end execution of influencer marketing campaigns, ensuring your message reaches a
-							highly-technical and engaged audience.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-handshake accent3"></span>
-						<h3>Creator Partnerships</h3>
-						<p>We leverage our exclusive network of top-tier AI and Tech creators to build long-term,
-							impactful brand ambassador programs.</p>
-					</section>
-				</div>
-				<div class="features-row">
-					<section>
-						<span class="icon solid major fa-chart-line accent4"></span>
-						<h3>Data-Driven Strategy</h3>
-						<p>Advanced analytics and performance tracking tailored for SaaS and tech products to guarantee
-							measurable ROI and sustainable growth.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-microchip accent5"></span>
-						<h3>Niche Expertise</h3>
-						<p>We speak the language of developers and AI engineers, ensuring your product is represented
-							accurately and authentically.</p>
-					</section>
-				</div>
-			</section>
 
-			<div class="row">
-				<div class="col-6 col-12-narrower">
-					<section class="box special">
-						<span class="image featured"><img src="images/creator.png"
-								alt="Tech Creator Workspace" /></span>
-						<h3>Empowering Creators</h3>
-						<p>We help technical influencers and educators monetize their passion by matching them with
-							cutting-edge products they actually believe in.</p>
-						<ul class="actions special">
-							<li><a href="#cta" class="button alt">Creator Application</a></li>
-						</ul>
-					</section>
-				</div>
-				<div class="col-6 col-12-narrower">
-					<section class="box special">
-						<span class="image featured"><img src="images/hero.png"
-								alt="Abstract Tech Visualization" /></span>
-						<h3>Scaling Brands</h3>
-						<p>Reach developers, engineers, and tech enthusiasts at scale through trusted voices in the
-							community.</p>
-						<ul class="actions special">
-							<li><a href="#cta" class="button alt">Brand Inquiry</a></li>
-						</ul>
-					</section>
-				</div>
-			</div>
 
-		</section>
-
-		<!-- CTA -->
-		<section id="cta">
-			<h2>Ready to scale your tech product?</h2>
-			<p>Get in touch to discover partnership opportunities.</p>
-			<form>
-				<div class="row gtr-50 gtr-uniform">
-					<div class="col-8 col-12-mobilep">
-						<input type="email" name="email" id="email" placeholder="Email Address" />
-					</div>
-					<div class="col-4 col-12-mobilep">
-						<input type="submit" value="Get Started" class="fit" />
-					</div>
-				</div>
-			</form>
-		</section>
-
-		<!-- Footer -->
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-				<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Gratovo Influencer Marketing. All rights reserved.</li>
-			</ul>
-		</footer>
-
-	</div>
-
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
 
 </body>
 
