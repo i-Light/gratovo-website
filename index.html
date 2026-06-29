@@ -149,9 +149,10 @@
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
     <!-- TopNavBar -->
     <header class="bg-surface-container-lowest border-b border-outline-variant shadow-sm w-full sticky top-0 z-50">
-        <div class="flex justify-between items-center h-20 px-grid-gutter max-w-container-max mx-auto gap-4"><a
-                class="flex items-center" href="#"><img alt="Gratovo Logo" class="h-8 w-auto"
-                    src="images/full-logo.png"></a>
+        <div class="flex justify-between items-center h-20 px-grid-gutter max-w-container-max mx-auto gap-4">
+            <a class="flex items-center" href="#">
+                <img alt="Gratovo Logo" class="h-6 md:h-8 w-auto shrink-0 object-contain" src="images/full-logo.png">
+            </a>
             <div class="flex items-center gap-8">
                 <!-- <nav class="hidden md:flex gap-8 items-center">
                     <a class="text-secondary hover:text-primary transition-colors font-label-sm uppercase"
@@ -160,11 +161,11 @@
                         href="#">Portfolio</a>
                 </nav> -->
                 <button
-                    class="bg-primary-container text-on-primary py-2 px-6 rounded-DEFAULT font-label-sm uppercase hover:bg-primary transition-colors rounded-full shadow-sm ">
+                    class="bg-primary-container text-on-primary py-1.5 px-4 md:py-2 md:px-6 rounded-full font-label-sm text-xs md:text-sm uppercase hover:bg-primary transition-colors shadow-sm">
                     <!--hidden md:block">-->
-                    <span class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 md:gap-2">
                         Work With Us
-                        <span class="material-symbols-outlined text-lg">rocket_launch</span>
+                        <span class="material-symbols-outlined text-base md:text-lg">rocket_launch</span>
                     </span>
                 </button>
                 <!-- <button class="md:hidden text-primary">
